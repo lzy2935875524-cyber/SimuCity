@@ -13,7 +13,7 @@ INFLUX_URL = "https://us-east-1-1.aws.cloud2.influxdata.com"
 st.set_page_config(page_title="SimuCity 监控中心", layout="wide")
 with st.sidebar:
     st.header("📱 手机扫码查看")
-    st.image("my_project_qr.png")
+    st.image(f"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://simucity-5snyzngayktkntdgrzvlpd.streamlit.app", caption="手机扫码围观")
     # 或者直接在线生成（更高级）：
     st.image(f"https://simucity-5snyzngayktkntdgrzvlpd.streamlit.app/", caption="扫码在手机上监控")
 st.title("🏙️ SimuCity 城市环境实时监控")
@@ -78,4 +78,5 @@ while True:
 
     except Exception as e:
         st.error(f"发生错误: {e}")
+
         time.sleep(5)
