@@ -11,6 +11,11 @@ INFLUX_URL = "https://us-east-1-1.aws.cloud2.influxdata.com"
 
 # --- 2. 页面设置 ---
 st.set_page_config(page_title="SimuCity 监控中心", layout="wide")
+with st.sidebar:
+    st.header("📱 手机扫码查看")
+    st.image("my_project_qr.png")
+    # 或者直接在线生成（更高级）：
+    st.image(f"https://simucity-5snyzngayktkntdgrzvlpd.streamlit.app/", caption="扫码在手机上监控")
 st.title("🏙️ SimuCity 城市环境实时监控")
 
 
